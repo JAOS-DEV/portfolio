@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Hero Section */
+.hero_section {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, #7a19f1, #332179);
+  color: white;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, min-content);
+  justify-items: center;
+  padding: 3rem 1rem 1rem 1rem;
+  position: relative;
+  clip-path: ellipse(150% 71% at 54% 28%);
+}
+
+.hero_section::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 300px;
+  opacity: 0.2;
+  background-image: url(./images/wave.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  z-index: 10;
+}
+
+.hero_title {
+  padding-bottom: 1rem;
+  grid-row: 1/1;
+}
+
+.hero_subtitle {
+  padding: 0rem 0rem 2rem 0;
+  grid-row: 2/2;
+}
+
+.hero_details {
+  font-size: 18px;
+  line-height: 1.8;
+  grid-row-start: 4/4;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero_details_span {
+  background-color: yellowgreen;
+  color: black;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+.profile_image_div {
+  display: flex;
+  grid-row: 3/3;
+  justify-content: center;
+  animation: fadeIn 6s;
+}
+
+.profile_image {
+  width: 50%;
+  border-radius: 30% 70% 57% 43% / 30% 53% 47% 70%;
+  box-shadow: 0px 0px 15px 5px #000000;
+  animation: slide-right 2s forwards;
+  transform: translateX(-200%);
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Projects Section */
+.projects_section {
+  /* height: 100%; --------------------------------------- */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0.5rem;
+}
+
+.project_title {
+  padding: 1rem 0 3rem 0;
+  text-decoration: underline;
+  color: gray;
+  font-weight: 400;
+}
+
+.project_card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem 0.5rem;
+  font-size: 18px;
+}
+
+.project_card_image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.project_card_image {
+  width: 80%;
+}
+
+.project_card_details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.project_card_title {
+  padding: 1rem 0rem;
+  font-weight: 400;
+}
+
+.project_card_details {
+  padding: 1rem 1.5rem;
+  color: gray;
+}
+
+.tech_used_card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech_used_title {
+  font-weight: 400;
+  color: gray;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.tech_item {
+  display: flex;
+  align-items: center;
+  background-color: rgb(224, 220, 220);
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 3px;
+  border-radius: 5px;
+}
+
+.tech_logos {
+  width: 30px;
+  margin-right: 1rem;
+}
+
+.buttons_container {
+  margin: 1rem;
+}
+
+.project_card_button {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to bottom, #7a19f1, #332179);
+  border-radius: 100px;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  margin: 1rem;
+}
+
+.project_card_button:hover {
+  background: linear-gradient(to bottom, #332179, #7a19f1);
+}
+
+.hr_projects {
+  width: 100%;
+  height: 1px;
+  color: black;
+}
+
+/* Contacts */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 1rem 0;
+  background: white;
+}
+
+.contact-h1 {
+  text-decoration: underline;
+  color: grey;
+  font-weight: 400;
+  /* font-size: 1.2rem; */
+}
+
+.contact-socials {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.social-icons {
+  width: 70px;
+}
+
+.mail:hover {
+  content: url(./images/mail-icon-hover.png);
+}
+.linkedin:hover {
+  content: url(./images/linkedin-icon-hover.png);
+}
+.github:hover {
+  content: url(./images/github-icon-hover.png);
+}
+
+/*  Media query */
+@media screen and (min-width: 900px) {
+  .profile_image {
+    width: 70%;
+  }
+
+  .hero_details {
+    font-size: 22px;
+    max-width: 95%;
+  }
+
+  .project_card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .project_card_image-container {
+    max-width: 50%;
+  }
+
+  .project_card_image {
+    width: 100%;
+  }
+
+  .project_card_details-container {
+    max-width: 50%;
+  }
+
+  .tech_used_card {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    align-items: center;
+  }
+
+  .tech_item {
+    width: 90%;
+  }
+}
