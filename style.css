@@ -23,7 +23,7 @@ img {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(to bottom, #7a19f1, #332179);
   color: white;
-  height: 80vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, min-content);
